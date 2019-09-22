@@ -8,6 +8,8 @@
     "build": "mdx-deck build deck.mdx"
   },
   "devDependencies": {
+    "gatsby": "2.14.7",
     "mdx-deck": "^3.0.11"
-  }
+  },
+  "dependencies": {}
 }
