@@ -12,32 +12,11 @@ export const themes = [syntaxTheme, theme]
 
 <Title>
 
-# Utility-first CSS Introduction
+# Diving in Functional CSS
 
-By Nelson Reitz
+Subtitle
 
 </Title>
-
----
-
-<TwoCols firstCol="33%" secondCol="66%">
-
-# Summary
-
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-
-</TwoCols>
 
 ---
 
@@ -46,10 +25,10 @@ By Nelson Reitz
 # Introduction
 
 - Utility-first CSS (a.k.a Functional CSS or Atomic CSS)
-- Different approach, ditch semantic classes and old "CSS Zen Garden"
+- Different approach, ditch semantic classes and old "CSS Zen Garden" mentality
 - Mention frameworks
 
-- `mb-2`, `text-center`, `flex`
+- Utility classes like .mb-2, .text-center, .flex
 
 </TwoCols>
 
@@ -109,15 +88,21 @@ How does it solve the problems?
 
 <TwoCols firstCol="33%" secondCol="66%">
 
-# Preview
+# Looks
 
-What does it look like?
+- Popular framework we'll be exploring:
+
+<img width="480px" src="https://camo.githubusercontent.com/97517e40f9727cc4637bea2d0e1b813d4639f8b2/68747470733a2f2f7461696c77696e646373732e636f6d2f696d672f7461696c77696e642e737667"/>
 
 </TwoCols>
 
 ---
 
-<TwoCols firstCol="50%" secondCol="50%">
+<TwoCols firstCol="33%" secondCol="66%">
+
+#
+
+![Card component](https://i.imgur.com/zlNCUaw.png "Card component")
 
 ```xml
 <div class="md:flex">
@@ -131,8 +116,6 @@ What does it look like?
   </div>
 </div>
 ```
-
-Render markup (live example?)
 
 </TwoCols>
 
@@ -183,28 +166,6 @@ module.exports = {
 ```
 
 </TwoCols>
-
----
-
-<TwoCols firstCol="33%" secondCol="66%">
-
-Slide with design tokens => Tailwind config
-
-</TwoCols>
-
----
-
-<TwoCols firstCol="33%" secondCol="66%">
-
-Show components, modern development
-
-</TwoCols>
-
-<Notes>
-
-- Fait peur à cause des vieux workflows
-
-</Notes>
 
 ---
 
@@ -264,6 +225,65 @@ Mention CSS-in-JS
 
 ---
 
+<TwoCols firstCol="50%" secondCol="50%">
+
+```javascript
+// example theme object
+{
+  colors,
+  fonts: {
+    body: 'system-ui, sans-serif',
+    heading: 'Georgia, serif',
+    monospace: 'Menlo, monospace',
+  },
+  fontSizes: [
+    12, 14, 16, 20, 24, 32, 48, 64
+  ],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  letterSpacings: {
+    body: 'normal',
+    caps: '0.2em',
+  },
+}
+```
+
+```jsx
+// example component
+export const Layout = ({ children }) => {
+  return (
+    <div
+      sx={{
+        height: '100%',
+        pt: 4,
+        mx: 2,
+        fontSize: 4,
+        textAlign: 'center',
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+```
+
+</TwoCols>
+
+<Notes>
+
+- Devient moins utiles avec les outils CSS-in-JS => Montrer exemple avec array de cette même présentation
+
+</Notes>
+
+---
+
 <TwoCols firstCol="33%" secondCol="66%">
 
 # Questions?
@@ -276,7 +296,7 @@ Mention CSS-in-JS
 
 # Conclusion
 
-Try it! Hard to get it until you try it, a lot of fun
+Try it! Hard to get it until you get your hands dirty, then it's a lot of fun! :wink:
 
 </TwoCols>
 
@@ -294,16 +314,13 @@ Try it! Hard to get it until you try it, a lot of fun
 
 # Links
 
-References:
-- [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
-- [In Defense of Utility-First CSS](https://frontstuff.io/in-defense-of-utility-first-css)
-- [A Real-Life Journey Into the Opinionated World of “Utility-First” CSS](https://vimeo.com/294976504)
-- [The perils of functional CSS](https://www.browserlondon.com/blog/2019/06/10/functional-css-perils/)
-- [Utility-first CSS - You have to try it first!](https://dev.to/mzanggl/utility-first-css-you-have-to-try-it-first-3m85)
-- [Simplify Styling with Functional CSS](https://rangle.io/blog/styling-with-functional-css/)
-- [Why can’t we use Functional CSS and regular CSS at the same time?](https://css-tricks.com/why-cant-we-use-functional-css-and-regular-css-at-the-same-time/)
+**References:**
+- [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/) by Adam Wathan
+- [Building a Scalable CSS Architecture](https://blog.algolia.com/redesigning-our-docs-part-4-building-a-scalable-css-architecture/) by Sarah Dayan
+- [A Real-Life Journey Into the Opinionated World of “Utility-First” CSS](https://vimeo.com/294976504), talk by Simon Vrachliotis
+- [In Defense of Utility-First CSS](https://johnpolacek.github.io/the-case-for-atomic-css/) by John Polacek
 
-Tools:
+**Tools:**
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tachyons](http://tachyons.io/)
 - [Basscss](https://basscss.com/)
