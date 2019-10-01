@@ -16,8 +16,8 @@ export default {
     },
     Slide: {
       display: 'block',
-      py: 4,
-      px: 5,
+      py: '8vh',
+      px: '4vw',
       fontSize: 5,
       textAlign: 'left',
     },
@@ -25,8 +25,6 @@ export default {
       mb: 3,
     },
     pre: {
-      background: 'black',
-      borderRadius: 4,
     },
     code: {
       fontSize: 2,

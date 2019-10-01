@@ -20,9 +20,8 @@ export default props => {
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
-            pt: 3,
-            pb: 3,
-            mx: 5,
+            py: 3,
+            mx: '4vw',
             fontFamily: 'Fira Sans, sans-serif',
             fontSize: 2,
             color: 'grey',

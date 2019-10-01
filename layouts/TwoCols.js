@@ -12,12 +12,12 @@ export const Layout = ({ children, firstCol, secondCol, ...props }) => {
         alignItems: 'baseline',
         width: '100%',
         height: '100%',
-        mx: '-1rem',
+        mx: '-2vw',
       }}
     >
       <div
         sx={{
-          px: 3,
+          px: '2vw',
           width: firstCol,
         }}
       >
@@ -25,7 +25,7 @@ export const Layout = ({ children, firstCol, secondCol, ...props }) => {
       </div>
       <div
         sx={{
-          px: 3,
+          px: '2vw',
           width: secondCol,
         }}
       >
