@@ -4,7 +4,7 @@ import { useDeck } from 'mdx-deck'
 
 export default props => {
   const deck = useDeck()
-  const { index } = deck
+  const { index, length } = deck
 
   return (
     <div
@@ -25,11 +25,10 @@ export default props => {
             fontFamily: 'Fira Sans, sans-serif',
             fontSize: 2,
             color: 'grey',
-            borderBottom: '1px solid lightgrey',
           }}
         >
           <span>Diving into Utility-first CSS</span>
-          <span>{index}</span>
+          <span>{index} / {length - 1}</span>
         </header>
       }
       {props.children}
