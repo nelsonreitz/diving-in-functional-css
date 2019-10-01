@@ -1,5 +1,5 @@
 import Layout from './Layout'
-import { Head } from 'mdx-deck'
+import { Head, Notes } from 'mdx-deck'
 import { prism } from 'mdx-deck/themes'
 import customTheme from './theme'
 
@@ -9,7 +9,7 @@ export const themes = [prism, customTheme]
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900&display=swap" rel="stylesheet" />
 </Head>
 
-# Utility-first CSS
+# Utility-first CSS Introduction
 
 ---
 
@@ -43,17 +43,36 @@ Mention frameworks
 
 </Layout>
 
+<Notes>
+
+- Se détache des classes semantic
+- Mentionner familiarités avec Bootstrap
+- Résumer aux utility classes comme `.mb-2`, etc.
+- Mentionner Frameworks (Tailwind, Tachyons, Basecss)
+
+</Notes>
+
 ---
 
 <Layout>
 
 # Problems
 
-What is it trying to solve?
+Why? What is it trying to solve?
 
+Prevents over abstraction
+You can't predict the future
 Mention scaling and maintaining css
 
 </Layout>
+
+<Notes>
+
+- Exemple réécrire du CSS sur un vieux projet
+- La cascade finit toujours par foirer
+- Se vérifie complètement dans mon cas de figure, arrivée
+
+</Notes>
 
 ---
 
@@ -64,6 +83,13 @@ Mention scaling and maintaining css
 How does it solve the problems?
 
 </Layout>
+
+<Notes>
+
+- Repense la façon de lier le CSS
+- Ne plus écrire de CSS
+
+</Notes>
 
 ---
 
@@ -88,6 +114,13 @@ What does it look like?
 
 </Layout>
 
+<Notes>
+
+- Apparence dégueulasse
+- Inline styles?
+
+</Notes>
+
 ---
 
 <Layout>
@@ -104,11 +137,18 @@ Demo with config file
 
 # Pros
 
-* Constrain design system (give tools instead of "write css")
-* Framework agnostic
-* 3
+- Constrain design system
+- Easy handover / teamwork
+- Framework agnostic
+- Quick design in browser
 
 </Layout>
+
+<Notes>
+
+- Contributeurs obligés de rester dans les règles du design system
+
+</Notes>
 
 ---
 
@@ -116,12 +156,18 @@ Demo with config file
 
 # Cons
 
-* Themes (`.text-black` need to change to `.text-white` on dark theme)
-* Web Inspector experience
-* Accessibility classNames
-* Old-fashioned integration (copypaste markup) can get difficult => Lead to next slide
+- Themes (`.text-black` need to change to `.text-white` on dark theme)
+- Web Inspector experience
+- Accessibility classNames
+- Old-fashioned integration (copypaste markup) can get difficult => Lead to next slide
 
 </Layout>
+
+<Notes>
+
+- Implémentation irréaliste avec workflow copypaste du markup actuel
+
+</Notes>
 
 ---
 
@@ -133,6 +179,13 @@ Design systems and integrations,
 Mention CSS-in-JS
 
 </Layout>
+
+<Notes>
+
+- Compliqué à implémenter avec le workflow styleguide actuel
+- Devient moins utiles avec les outils CSS-in-JS => Montrer exemple avec array de cette même présentation
+
+</Notes>
 
 ---
 
@@ -148,7 +201,17 @@ Mention CSS-in-JS
 
 # Conclusion
 
+Try it! Hard to get it until you try it, a lot of fun
+
 </Layout>
+
+<Notes>
+
+- Essayez sur des petits projets
+- Incroyable sur des petits prototypes
+- Fun!
+
+</Notes>
 
 ---
 
@@ -157,21 +220,25 @@ Mention CSS-in-JS
 # Links
 
 References:
-* [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
-* [In Defense of Utility-First CSS](https://frontstuff.io/in-defense-of-utility-first-css)
-* [A Real-Life Journey Into the Opinionated World of “Utility-First” CSS with Simon Vrachliotis (Talk)](https://vimeo.com/294976504)
-* [The perils of functional CSS](https://www.browserlondon.com/blog/2019/06/10/functional-css-perils/)
-* [Utility-first CSS - You have to try it first!](https://dev.to/mzanggl/utility-first-css-you-have-to-try-it-first-3m85)
-* [Simplify Styling with Functional CSS](https://rangle.io/blog/styling-with-functional-css/)
-* [Why can’t we use Functional CSS and regular CSS at the same time?](https://css-tricks.com/why-cant-we-use-functional-css-and-regular-css-at-the-same-time/)
+- [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
+- [In Defense of Utility-First CSS](https://frontstuff.io/in-defense-of-utility-first-css)
+- [A Real-Life Journey Into the Opinionated World of “Utility-First” CSS](https://vimeo.com/294976504)
+- [The perils of functional CSS](https://www.browserlondon.com/blog/2019/06/10/functional-css-perils/)
+- [Utility-first CSS - You have to try it first!](https://dev.to/mzanggl/utility-first-css-you-have-to-try-it-first-3m85)
+- [Simplify Styling with Functional CSS](https://rangle.io/blog/styling-with-functional-css/)
+- [Why can’t we use Functional CSS and regular CSS at the same time?](https://css-tricks.com/why-cant-we-use-functional-css-and-regular-css-at-the-same-time/)
 
 Tools:
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Tachyons](http://tachyons.io/)
-* [Basscss](https://basscss.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Tachyons](http://tachyons.io/)
+- [Basscss](https://basscss.com/)
 
 </Layout>
 
 ---
 
-# The End 
+# Thank you!
+
+This presentation is open-source:
+- Live - [utility-first-css.netlify.com](https://utility-first-css.netlify.com)
+- Code - [github.com/nelsonreitz/utility-first-css](https://github.com/nelsonreitz/utility-first-css)
