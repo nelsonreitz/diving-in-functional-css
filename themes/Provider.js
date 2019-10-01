@@ -28,7 +28,7 @@ export default props => {
             color: 'grey',
           }}
         >
-          <span>Diving into Utility-first CSS</span>
+          <span>Utility-first CSS Introduction</span>
           <span>{index} / {length - 1}</span>
         </header>
       }

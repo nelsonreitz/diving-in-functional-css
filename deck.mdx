@@ -1,9 +1,9 @@
-import Layout from './Layout'
 import { Head, Notes } from 'mdx-deck'
 import { prism } from 'mdx-deck/themes'
-import customTheme from './theme'
+import theme from './themes/theme'
+import TwoCols from './layouts/TwoCols'
 
-export const themes = [prism, customTheme]
+export const themes = [prism, theme]
 
 <Head>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900&display=swap" rel="stylesheet" />
@@ -13,7 +13,7 @@ export const themes = [prism, customTheme]
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Summary
 
@@ -30,18 +30,18 @@ export const themes = [prism, customTheme]
 12.
 13.
 
-</Layout>
+</TwoCols>
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Introduction
 
 What is it?
 Mention frameworks
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -54,7 +54,7 @@ Mention frameworks
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Problems
 
@@ -64,7 +64,7 @@ Prevents over abstraction
 You can't predict the future
 Mention scaling and maintaining css
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -76,13 +76,13 @@ Mention scaling and maintaining css
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Solutions
 
 How does it solve the problems?
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -93,7 +93,7 @@ How does it solve the problems?
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Preview
 
@@ -112,7 +112,7 @@ What does it look like?
 </div>
 ```
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -123,17 +123,17 @@ What does it look like?
 
 ---
 
-<Layout>
+<TwoCols>
 
 # In practice
 
 Demo with config file
 
-</Layout>
+</TwoCols>
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Pros
 
@@ -142,7 +142,7 @@ Demo with config file
 - Framework agnostic
 - Quick design in browser
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -152,7 +152,7 @@ Demo with config file
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Cons
 
@@ -161,7 +161,7 @@ Demo with config file
 - Accessibility classNames
 - Old-fashioned integration (copypaste markup) can get difficult => Lead to next slide
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -171,14 +171,14 @@ Demo with config file
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Future?
 
 Design systems and integrations, 
 Mention CSS-in-JS
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -189,21 +189,21 @@ Mention CSS-in-JS
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Questions?
 
-</Layout>
+</TwoCols>
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Conclusion
 
 Try it! Hard to get it until you try it, a lot of fun
 
-</Layout>
+</TwoCols>
 
 <Notes>
 
@@ -215,7 +215,7 @@ Try it! Hard to get it until you try it, a lot of fun
 
 ---
 
-<Layout>
+<TwoCols>
 
 # Links
 
@@ -233,7 +233,7 @@ Tools:
 - [Tachyons](http://tachyons.io/)
 - [Basscss](https://basscss.com/)
 
-</Layout>
+</TwoCols>
 
 ---
 
