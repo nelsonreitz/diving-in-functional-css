@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 
-export const Layout = ({ children, ...props }) => {
+export const Layout = ({ children, firstCol, secondCol, ...props }) => {
   const [first, ...rest] = React.Children.toArray(children)
   return (
     <div
@@ -12,10 +12,25 @@ export const Layout = ({ children, ...props }) => {
         alignItems: 'baseline',
         width: '100%',
         height: '100%',
+        mx: '-1rem',
       }}
     >
-      <div sx={{ width: '33%' }}>{first}</div>
-      <div sx={{ width: '66%' }}>{rest}</div>
+      <div
+        sx={{
+          px: 3,
+          width: firstCol,
+        }}
+      >
+        {first}
+      </div>
+      <div
+        sx={{
+          px: 3,
+          width: secondCol,
+        }}
+      >
+        {rest}
+      </div>
     </div>
   )
 }
