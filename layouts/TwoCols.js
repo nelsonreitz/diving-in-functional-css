@@ -12,7 +12,8 @@ export const Layout = ({ children, ...props }) => {
         alignItems: 'baseline',
         width: '100%',
         height: '100%',
-      }}>
+      }}
+    >
       <div sx={{ width: '33%' }}>{first}</div>
       <div sx={{ width: '66%' }}>{rest}</div>
     </div>
