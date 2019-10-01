@@ -5,6 +5,7 @@ import { useDeck } from 'mdx-deck'
 export default props => {
   const deck = useDeck()
   const { index, length } = deck
+  const normalMode = deck.mode === 'normal'
 
   return (
     <div
@@ -14,7 +15,7 @@ export default props => {
         height: '100vh',
       }}
     >
-      {index > 0 &&
+      {index > 0 && normalMode &&
         <header
           sx={{
             display: 'flex',
