@@ -10,7 +10,6 @@ export const Layout = ({ children, firstCol, secondCol, ...props }) => {
       sx={{
         display: 'flex',
         alignItems: 'baseline',
-        width: '100%',
         height: '100%',
         mx: '-2vw',
       }}
