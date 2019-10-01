@@ -1,10 +1,10 @@
-import { Head, Notes } from 'mdx-deck'
-import { prism } from 'mdx-deck/themes'
+import { Head, Notes, Image } from 'mdx-deck'
+import syntaxTheme from './themes/syntax-highlighter'
 import theme from './themes/theme'
 import TwoCols from './layouts/TwoCols'
 import Title from './layouts/Title'
 
-export const themes = [prism, theme]
+export const themes = [syntaxTheme, theme]
 
 <Head>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900&display=swap" rel="stylesheet" />
@@ -119,7 +119,7 @@ What does it look like?
 
 <TwoCols firstCol="50%" secondCol="50%">
 
-```markup
+```xml
 <div class="md:flex">
   <div class="md:flex-shrink-0">
     <img class="rounded-lg md:w-56" src="..." alt="Woman paying for a purchase">
@@ -147,9 +147,40 @@ Render markup (live example?)
 
 <TwoCols firstCol="33%" secondCol="66%">
 
-# In practice
+Design tokens =>
 
-Demo with config file
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
+    fontFamily: {
+      display: ['Gilroy', 'sans-serif'],
+      body: ['Graphik', 'sans-serif'],
+    },
+    borderWidth: {
+      default: '1px',
+      '0': '0',
+      '2': '2px',
+      '4': '4px',
+    },
+    extend: {
+      colors: {
+        cyan: '#9cdbff',
+      },
+      spacing: {
+        '96': '24rem',
+        '128': '32rem',
+      }
+    }
+  }
+}
+```
 
 </TwoCols>
 
@@ -284,5 +315,5 @@ Tools:
 # Thank you!
 
 This presentation is open-source:
-- Live - [utility-first-css.netlify.com](https://utility-first-css.netlify.com)
+- Live - [utility-first-css-introduction.netlify.com](https://utility-first-css-introduction.netlify.com)
 - Code - [github.com/nelsonreitz/utility-first-css](https://github.com/nelsonreitz/utility-first-css)
