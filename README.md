@@ -1,27 +1,45 @@
 # Diving in functional CSS
 
-Watch live: [diving-in-functional-css.netlify.com](https://diving-in-functional-css.netlify.com)
+> Watch live: [diving-in-functional-css.netlify.com](https://diving-in-functional-css.netlify.com)
 
-This is a quick overview of Utility CSS (a.k.a Functional CSS or Atomic CSS), intended for my coworkers [@antistatique](https://github.com/antistatique).
+Quick overview of Functional CSS (a.k.a Utility-first CSS or Atomic CSS).
 
-Built with [MDX Deck](https://github.com/jxnblk/mdx-deck).
+## Getting Started
 
-## Project setup
+### Prerequisites
 
-Install dependencies
+- [Yarn](https://yarnpkg.com/)
+
+### Installing
+
+**Install dependencies**
 
 ```shell
 yarn
 ```
 
-Start the local environment
+**Start local development server**
 
 ```shell
 yarn start
 ```
 
-Build
+MDX Deck will start a hot-reloading development environment accessible by default at [localhost:8000](http://localhost:8000).
+
+## Build
+
+**Create a production build**
 
 ```shell
-yarn build
+yarn start
 ```
+
+Static files will be compiled in the `public/` folder.
+
+## Deployment
+
+Deployment is automatited with [Netlify](https://www.netlify.com/).
+
+## Built With
+
+- [MDX Deck](https://github.com/jxnblk/mdx-deck) - Deck builder powered by MDX and Gatsby
