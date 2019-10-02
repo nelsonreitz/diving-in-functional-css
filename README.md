@@ -6,7 +6,7 @@ Quick overview of Functional CSS (a.k.a Utility-first CSS or Atomic CSS).
 
 ## Getting Started
 
-### Prerequisites
+**Prerequisites**
 
 - [Yarn](https://yarnpkg.com/)
 
@@ -34,7 +34,7 @@ Static files will be compiled in the `public/` folder.
 
 ## Deployment
 
-Deployment is automatited with [Netlify](https://www.netlify.com/).
+Deployment is automated on the `master` branch with [Netlify](https://www.netlify.com/).
 
 ## Built With
 
