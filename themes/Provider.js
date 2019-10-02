@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx } from 'theme-ui'
 import { useDeck } from 'mdx-deck'
 
@@ -15,7 +16,7 @@ export default props => {
         height: '100vh',
       }}
     >
-      {index > 0 && normalMode &&
+      {normalMode &&
         <header
           sx={{
             display: 'flex',
@@ -27,8 +28,14 @@ export default props => {
             color: 'grey',
           }}
         >
-          <span>Diving in Functional CSS</span>
-          <span>{index} / {length - 1}</span>
+          {index > 0 ? (
+            <>
+              <span>Diving in Functional CSS</span>
+              <span>{index} / {length - 1}</span>
+            </>
+          ) : (
+            <span>October 2019</span>
+          )}
         </header>
       }
       {props.children}

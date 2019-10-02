@@ -9,6 +9,7 @@ export default {
   },
   styles: {
     h1: {
+      mb: '-1rem',
       fontSize: 7,
     },
     blockquote: {
@@ -16,7 +17,7 @@ export default {
     },
     Slide: {
       display: 'block',
-      py: '8vh',
+      py: '14vh',
       px: '4vw',
       fontSize: 5,
       textAlign: 'left',

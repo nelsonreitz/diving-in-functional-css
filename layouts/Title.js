@@ -7,11 +7,12 @@ export const Title = ({ children, ...props }) => {
       {...props}
       sx={{
         width: '100%',
-        maxWidth: '50vw',
         height: '100%',
-        pt: '15vh',
+        pt: '7vh',
         mx: 'auto',
-        textAlign: 'center',
+        h1: {
+          mb: '-1rem',
+        },
       }}
     >
       {children}
