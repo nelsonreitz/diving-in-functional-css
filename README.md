@@ -27,7 +27,7 @@ MDX Deck will start a hot-reloading development environment at [localhost:8000](
 **Create a production build**
 
 ```shell
-yarn start
+yarn build
 ```
 
 Static files will be compiled in the `public/` folder.
