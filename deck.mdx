@@ -10,13 +10,20 @@ export const themes = [syntaxTheme, theme]
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900&display=swap" rel="stylesheet" />
 </Head>
 
-<Title>
+
 
 # Diving in Functional CSS
 
-Subtitle
+Introduction with Tailwind CSS
 
-</Title>
+
+
+<Notes>
+
+- Annoncer le plan
+- Mon approche, mon voyage
+
+</Notes>
 
 ---
 
@@ -24,11 +31,9 @@ Subtitle
 
 # Introduction
 
-- Utility-first CSS (a.k.a Functional CSS or Atomic CSS)
-- Different approach, ditch semantic classes and old "CSS Zen Garden" mentality
-- Mention frameworks
-
-- Utility classes like .mb-2, .text-center, .flex
+- Functional CSS (a.k.a Utility-first CSS or Atomic CSS)
+- Different approach, ditch semantic classes and *CSS Zen Garden* mentality
+- Uses classes like .mb-2, .text-center, .flex
 
 </TwoCols>
 
@@ -47,11 +52,13 @@ Subtitle
 
 # Problems
 
-Why? What is it trying to solve?
+*Why? What is it trying to solve?*
 
-- Prevents over abstraction
+- Over abstraction
+- Naming useless things
 - You can't predict the future
-- Scaling and maintaining
+- Scaling and maintaining semantic CSS
+- CSS is global => scary
 
 </TwoCols>
 
@@ -69,11 +76,11 @@ Why? What is it trying to solve?
 
 # Solutions
 
-How does it solve the problems?
+*How does it solve the problems?*
 
 - Provide "toolbox" of utilities
 - You only write classes, no CSS
-- Can extend to create components (useful for buttons and atomic elements)
+- Styles are attached to components
 
 </TwoCols>
 
@@ -88,31 +95,59 @@ How does it solve the problems?
 
 <TwoCols firstCol="33%" secondCol="66%">
 
-# Looks
+# From this
 
-- Popular framework we'll be exploring:
-
-<img width="480px" src="https://camo.githubusercontent.com/97517e40f9727cc4637bea2d0e1b813d4639f8b2/68747470733a2f2f7461696c77696e646373732e636f6d2f696d672f7461696c77696e642e737667"/>
+```css
+.chat-notification {
+  display: flex;
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.chat-notification-logo-wrapper {
+  flex-shrink: 0;
+}
+.chat-notification-logo {
+  height: 3rem;
+  width: 3rem;
+}
+.chat-notification-content {
+  margin-left: 1.5rem;
+  padding-top: 0.25rem;
+}
+.chat-notification-title {
+  color: #1a202c;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+.chat-notification-message {
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+```
 
 </TwoCols>
 
 ---
 
-<TwoCols firstCol="33%" secondCol="66%">
+<TwoCols firstCol="33%" secondCol="66%" style={{alignItems: 'flex-start'}}>
 
-#
+# To this
 
-![Card component](https://i.imgur.com/zlNCUaw.png "Card component")
+![Card component](https://i.imgur.com/CNsGCbx.png "Card component")
 
 ```xml
-<div class="md:flex">
-  <div class="md:flex-shrink-0">
-    <img class="rounded-lg md:w-56" src="..." alt="Woman paying for a purchase">
+<div class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
+  <div class="flex-shrink-0">
+    <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo">
   </div>
-  <div class="mt-4 md:mt-0 md:ml-6">
-    <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Marketing</div>
-    <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Finding customers for your new business</a>
-    <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+  <div class="ml-6 pt-1">
+    <h4 class="text-xl text-gray-900 leading-tight">ChitChat</h4>
+    <p class="text-base text-gray-600 leading-normal">You have a new message!</p>
   </div>
 </div>
 ```
@@ -121,7 +156,7 @@ How does it solve the problems?
 
 <Notes>
 
-- Apparence dégueulasse
+- Première impression: apparence dégueulasse
 - Inline styles?
 
 </Notes>
@@ -130,7 +165,7 @@ How does it solve the problems?
 
 <TwoCols firstCol="33%" secondCol="66%">
 
-Design tokens =>
+# Design config
 
 ```javascript
 // tailwind.config.js
@@ -177,12 +212,13 @@ module.exports = {
 - Easy handover / teamwork
 - Framework agnostic
 - Quick design in browser
+- Scaling and maintaining
 
 </TwoCols>
 
 <Notes>
 
-- Contributeurs obligés de rester dans les règles du design system
+- Contributeurs obligés de rester dans les règles du design system => Mentionner arrivée à Antistatique
 
 </Notes>
 
@@ -192,10 +228,11 @@ module.exports = {
 
 # Cons
 
-- Themes (`.text-black` need to change to `.text-white` on dark theme)
+- Ugly code with long lines
+- Working with themes
 - Web Inspector experience
 - Accessibility classNames
-- Old-fashioned integration (copypaste markup) can get difficult => Lead to next slide
+- Old-fashioned integration (copypaste markup) can get difficult
 
 </TwoCols>
 
@@ -209,17 +246,17 @@ module.exports = {
 
 <TwoCols firstCol="33%" secondCol="66%">
 
-# The future?
+# The future
 
-Design systems and integrations, 
-Mention CSS-in-JS
+- Design system implementation
+- CSS-in-JS?
 
 </TwoCols>
 
 <Notes>
 
 - Compliqué à implémenter avec le workflow styleguide actuel
-- Devient moins utiles avec les outils CSS-in-JS => Montrer exemple avec array de cette même présentation
+- Mêmes intentions que les frameworks CSS-in-JS
 
 </Notes>
 
@@ -278,7 +315,25 @@ export const Layout = ({ children }) => {
 
 <Notes>
 
-- Devient moins utiles avec les outils CSS-in-JS => Montrer exemple avec array de cette même présentation
+- Exemple avec array de cette même présentation
+
+</Notes>
+
+---
+
+<TwoCols firstCol="33%" secondCol="66%">
+
+# Conclusion
+
+- **Try it!**
+- Hard to get it until you get your hands dirty 
+- Then it's a lot of fun :wink:
+
+</TwoCols>
+
+<Notes>
+
+- Essayez sur des petits projets => Fun
 
 </Notes>
 
@@ -289,24 +344,6 @@ export const Layout = ({ children }) => {
 # Questions?
 
 </TwoCols>
-
----
-
-<TwoCols firstCol="33%" secondCol="66%">
-
-# Conclusion
-
-Try it! Hard to get it until you get your hands dirty, then it's a lot of fun! :wink:
-
-</TwoCols>
-
-<Notes>
-
-- Essayez sur des petits projets
-- Incroyable sur des petits prototypes
-- Fun!
-
-</Notes>
 
 ---
 
@@ -332,5 +369,5 @@ Try it! Hard to get it until you get your hands dirty, then it's a lot of fun! :
 # Thank you!
 
 This presentation is open-source:
-- Live - [utility-first-css-introduction.netlify.com](https://utility-first-css-introduction.netlify.com)
-- Code - [github.com/nelsonreitz/utility-first-css](https://github.com/nelsonreitz/utility-first-css)
+- Live - [diving-in-functional-css.netlify.com](https://diving-in-functional-css.netlify.com)
+- Code - [github.com/nelsonreitz/diving-in-functional-css](https://github.com/nelsonreitz/diving-in-functional-css)
