@@ -1,4 +1,4 @@
-# Diving in functional CSS
+# Diving in Functional CSS
 
 > Watch live: [diving-in-functional-css.netlify.com](https://diving-in-functional-css.netlify.com)
 
@@ -9,8 +9,6 @@ Quick overview of Functional CSS (a.k.a Utility-first CSS or Atomic CSS).
 ### Prerequisites
 
 - [Yarn](https://yarnpkg.com/)
-
-### Installing
 
 **Install dependencies**
 
@@ -24,9 +22,7 @@ yarn
 yarn start
 ```
 
-MDX Deck will start a hot-reloading development environment accessible by default at [localhost:8000](http://localhost:8000).
-
-## Build
+MDX Deck will start a hot-reloading development environment at [localhost:8000](http://localhost:8000).
 
 **Create a production build**
 
